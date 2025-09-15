@@ -20,3 +20,10 @@ Q8. Find Smallest Element in an Array, Write a function findMin(int arr[]) that 
 
 Q9. Palindrome Check (Number or String), Write a function isPalindrome(int n) that checks whether a number is palindrome or not.
     Example: Input 121 → true.
+
+Q10. Simple Calculator using Functions, Write separate functions:
+        add(int a, int b)
+        subtract(int a, int b)
+        multiply(int a, int b)
+        divide(int a, int b)
+        Call them based on user choice.
