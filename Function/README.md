@@ -17,3 +17,6 @@ Q7. Write a function reverseNumber(int n) that returns the reverse of a given nu
 
 Q8. Find Smallest Element in an Array, Write a function findMin(int arr[]) that returns the smallest element in the array.
     Call it from main().
+
+Q9. Palindrome Check (Number or String), Write a function isPalindrome(int n) that checks whether a number is palindrome or not.
+    Example: Input 121 → true.
