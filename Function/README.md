@@ -43,3 +43,5 @@ Q16. Write a function to find the product of digits of a given number.
 Q17. write a program to check the given number is perfect square or not
 
 Q18. Write a function to count the number of digits in a given number.
+
+Q19. Write a function to check whether the given number is a neon number (sum of digits of square = number).
