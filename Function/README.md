@@ -27,3 +27,13 @@ Q10. Simple Calculator using Functions, Write separate functions:
         multiply(int a, int b)
         divide(int a, int b)
         Call them based on user choice.
+
+Q11. Write a function to find the sum of first n natural numbers.
+
+Q12. Write a function to find the sum of squares of first n natural numbers.
+
+Q13. Write a function to find the sum of cubes of first n natural numbers.
+
+Q14. Write a function to check whether a number is a Harshad number (divisible by sum of its digits).
+
+Q15. Write a function to check if a number is a strong number (sum of factorial of digits = number).
