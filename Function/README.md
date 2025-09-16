@@ -37,3 +37,9 @@ Q13. Write a function to find the sum of cubes of first n natural numbers.
 Q14. Write a function to check whether a number is a Harshad number (divisible by sum of its digits).
 
 Q15. Write a function to check if a number is a strong number (sum of factorial of digits = number).
+
+Q16. Write a function to find the product of digits of a given number.
+
+Q17. write a program to check the given number is perfect square or not
+
+Q18. Write a function to count the number of digits in a given number.
