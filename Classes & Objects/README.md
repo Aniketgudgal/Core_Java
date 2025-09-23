@@ -26,3 +26,6 @@ Q9. Convert Celsius to Fahrenheit, Create a class TemperatureConverter with a me
     Explanation: Demonstrates unit conversion logic.
 
 Q10. Find the Area of a Circle, Create a class CircleArea with a method findArea that calculates the area given the radius.
+
+Q11. Reverse a Number, Create a class NumberReverser with a method reverse that reverses a given integer number.
+     Explanation: Covers basic loops for number manipulation.
