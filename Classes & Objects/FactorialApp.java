@@ -11,7 +11,7 @@ class Factorial
 	{
 		if(n==0)
 		{
-			return fact;
+			return 1;
 		}
 		fact=fact*n;
 		return factorialCalculator(n-1);
