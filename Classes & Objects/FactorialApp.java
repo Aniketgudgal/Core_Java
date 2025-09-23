@@ -6,15 +6,13 @@ Explanation: Focuses on iterative or recursive logic.
 import java.util.Scanner;
 class Factorial
 {
-	int fact = 1;
 	int factorialCalculator(int n)
 	{
 		if(n==0)
 		{
 			return 1;
 		}
-		fact=fact*n;
-		return factorialCalculator(n-1);
+		return n*factorialCalculator(n-1);
 	}
 }
 public class FactorialApp
