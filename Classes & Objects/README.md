@@ -29,3 +29,6 @@ Q10. Find the Area of a Circle, Create a class CircleArea with a method findArea
 
 Q11. Reverse a Number, Create a class NumberReverser with a method reverse that reverses a given integer number.
      Explanation: Covers basic loops for number manipulation.
+
+Q12. Find Factorial of a Number, Create a class FactorialCalculator with a method findFactorial to compute the factorial of a number.
+     Explanation: Focuses on iterative or recursive logic.
