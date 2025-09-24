@@ -32,3 +32,18 @@ Q11. Reverse a Number, Create a class NumberReverser with a method reverse that 
 
 Q12. Find Factorial of a Number, Create a class FactorialCalculator with a method findFactorial to compute the factorial of a number.
      Explanation: Focuses on iterative or recursive logic.
+
+Q13. Find Power of a Number, Create a class PowerCalculator with a method power that calculates base raised to an exponent.
+     Explanation: Demonstrates looping or recursion.
+
+Q14. Check for Prime Numbers, Create a class PrimeChecker with a method isPrime to check if a number is prime.
+     Explanation: Introduces number theory logic.
+
+Q15. Swap Two Numbers, Create a class Swapper with a method swap that swaps the values of two numbers without using a third variable.
+     Explanation: Covers mathematical operations for swapping.
+
+Q16. Generate Multiplication Table, Create a class MultiplicationTable with a method printTable to print the table of a given number.
+     Explanation: Explains nested loops and formatted printing.
+
+Q17. Calculate Sum of Digits, Create a class DigitSumCalculator with a method calculateSum that computes the sum of digits of a number.
+     Explanation: Practices loops for digit extraction.
