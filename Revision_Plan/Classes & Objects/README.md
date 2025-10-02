@@ -14,3 +14,7 @@ character is alphabet or digit return true if character is digit then return fal
 Q4. Write program to create class name as FindMax with two functions
  void setArray(int a[]): this function is used for accept array as parameter
  int getMax(): this function can find the max value from array and return it.
+ 
+ Q5. Write program to create class name as SortArr with two functions
+ void setArray(int a[]): this function can accept array as parameter
+ int [] getSortArray(): this function can perform sorting on array and return sorted array
