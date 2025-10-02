@@ -18,3 +18,6 @@ Q4. Write program to create class name as FindMax with two functions
  Q5. Write program to create class name as SortArr with two functions
  void setArray(int a[]): this function can accept array as parameter
  int [] getSortArray(): this function can perform sorting on array and return sorted array
+
+ Q6. Write program to create POJO class name as Employee with id,name and salary attribute and
+store data in object and retrieve data from object
