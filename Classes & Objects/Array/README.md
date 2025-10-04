@@ -19,3 +19,10 @@ Functions:
 void inputArray(int arr[])
 double findAverage()
 Logic: Use sum ÷ total elements.
+
+Q4. Search an Element in Array
+Class: ArraySearch
+Functions:
+void inputArray(int arr[])
+boolean searchElement(int key)
+Logic: Traverse array, check if key matches any element.
