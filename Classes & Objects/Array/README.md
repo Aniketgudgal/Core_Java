@@ -12,3 +12,10 @@ Functions:
 void inputArray(int arr[])
 int calculateSum()
 Logic: Traverse array and add all values to sum.
+
+Q3. Calculate Average of Array Elements
+Class: ArrayAverage
+Functions:
+void inputArray(int arr[])
+double findAverage()
+Logic: Use sum ÷ total elements.
