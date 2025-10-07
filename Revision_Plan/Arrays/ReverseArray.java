@@ -24,7 +24,7 @@ public class ReverseArray
 			k++;
 			j--;
 		}
-		// display array
+		// display array an array
 		for(int i= 0; i < num.length; i++)
 		{
 			System.out.print(" "+num[i]);

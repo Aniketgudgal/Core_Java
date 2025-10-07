@@ -16,7 +16,7 @@ public class ReverseArray
 		// reverse array logic using two pointer
 		int k = 0; 
 		int j = num.length - 1;
-		while(i < j)
+		while(k < j)
 		{
 			num[k] = num[k] + num[j];
 			num[j] = num[k] - num[j];
