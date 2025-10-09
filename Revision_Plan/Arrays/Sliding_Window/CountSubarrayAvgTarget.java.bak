@@ -22,20 +22,17 @@ public class CountSubarrayAvgTarget
 		int count = 0,sum = 0;
 		float maxAvg = 0;
 		float avg = 0;
-		
-		//count first window
 		for(int i = 0; i < k; i++)
 		{
 			sum += nums[i];
 		}
-		// calculate and check the is greater than equal to k
 		avg = sum/k;
 		if(avg >= k)
 		{
 			count++;
 			maxAvg = avg;
 		}
-		// check remainings slides
+		
 		for(int i = k; i < nums.length; i++)
 		{
 			sum = sum - nums[i-k] + nums[i];
@@ -46,8 +43,6 @@ public class CountSubarrayAvgTarget
 				maxAvg = avg;
 			}
 		}
-		// print max Average
-		// total sildes which has avg is greater than equal to k
 		System.out.println("The Avg is: "+maxAvg);
 		System.out.println("The count is: "+count);
 	}
