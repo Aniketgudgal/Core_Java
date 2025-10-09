@@ -9,9 +9,12 @@ public class NegativeEveryWindow
 	public static void main(String x[])
 	{
 		Scanner sc = new Scanner(System.in);
+		// take array size from user
 		System.out.print("Enter the size of array: ");
 		int size = sc.nextInt();
 		int nums[] = new int[size];
+		
+		// insert values in array
 		System.out.print("Enter the values in array: ");
 		for(int i = 0; i < nums.length; i++)
 		{
