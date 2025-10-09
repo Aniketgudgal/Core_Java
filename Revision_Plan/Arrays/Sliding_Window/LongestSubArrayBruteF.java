@@ -1,0 +1,46 @@
+import java.util.Scanner;
+// longest subarray with sum <= k
+
+// this example i do in the brute force approach
+
+public class LongestSubArrayBruteF
+{
+	public static void main(String x[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the size of array: ");
+		int size = sc.nextInt();
+		int nums[] = new int[size];
+		// insert values in array
+		System.out.print("Enter the values in array: ");
+		for(int i = 0; i < nums.length; i++)
+		{
+			nums[i] = sc.nextInt();
+		}
+		
+		System.out.println("Enter the value of k: ");
+		int k = sc.nextInt();
+		int maxlen = 0;
+		int longSum = 0;
+		for(int i = 0; i < nums.length; i++)
+		{
+			int sum = 0;
+			for(int j = i; j < nums.length; j++)
+			{
+				sum += nums[j];
+				if(sum <= k)
+				{
+					if((j - i + 1) > maxlen)
+					{
+						maxlen = (j - i + 1);
+						longSum = sum;
+					}
+				}
+				else if(sum > k)
+					break;
+			}
+		}
+		System.out.println("The sum is: "+longSum);
+		System.out.println("The max length of subarray is: "+maxlen);
+	}
+}
