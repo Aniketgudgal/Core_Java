@@ -11,27 +11,29 @@ public class MoveZeros
 		System.out.print("Enter the size of Array: ");
 		int size = sc.nextInt();
 		int nums[] = new int[size];
+		System.out.println("Enter the values in Array");
 		for(int i = 0; i < nums.length; i++)
 		{
 			nums[i] = sc.nextInt();
 		}
-		
-		for(int i = 0; i < nums.length - 1;)
+		int j = 0;
+		int i = 0;
+		while(i < nums.length)
 		{
-			if(nums[i+1] > nums[i])
+			if(nums[i] != 0)
 			{
-				nums[i] = nums[i] + nums[i + 1];
-				nums[i+1] = nums[i] - nums[i+1];
-				nums[i] = nums[i] - nums[i+1];
+				nums[j] = nums[i];
+				j++;
 			}
+			i++;
 		}
-		System.out.println("Result Array");
+		while(j < nums.length)
+		{
+			nums[j] = 0;
+		}
+		System.out.println("The Result Array is ");
 		for(int k = 0; k < nums.length; k++)
 		{
-			if(nums.length == 1)
-			{
-				break;
-			}
 			System.out.print(" "+nums[k]);
 		}
 	}

@@ -53,11 +53,25 @@ public class MergeTwoArray
 				j--;
 				k--;
 			}
-			for(int l = 0; l < num1.length; l++)
+			while(i >= 0)
 			{
-				System.out.print(" "+num1[l]);
+				num2[k] = num1[i];
+				i--;
+				k--;
 			}
-		
-		
+			if(num1.length > num2.length)
+			{
+				for(int l = 0; l < num1.length; l++)
+				{
+					System.out.print(" "+num1[l]);
+				}
+			}
+			else
+			{
+				for(int l = 0; l < num2.length; l++)
+				{
+					System.out.print(" "+num2[l]);
+				}
+			}
 	}
 }

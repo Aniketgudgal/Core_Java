@@ -1,4 +1,3 @@
-//9. Merge Two Arrays
 /*
 4. Merge Two Sorted Arrays (In-place)
 Approach: Two Pointers from end
@@ -30,6 +29,8 @@ public class MergeTwoArray
 			num2[i] = sc.nextInt();
 		}
 		
+		if(num1.length > num2.length)
+		{
 			int i = num1.length - num2.length - 1;
 			int j = num2.length - 1;
 			int k = (num1.length - num2.length) + num2.length -1;
@@ -58,7 +59,38 @@ public class MergeTwoArray
 			{
 				System.out.print(" "+num1[l]);
 			}
-		
+		}
+		else
+		{
+			int i = num1.length - 1;
+			int j = num2.length - num1.length - 1;
+			int k = (num2.length - num1.length) + num1.length -1;
+			while(j >=0 && i >= 0)
+			{
+				if(num2[i] >= num1[j]) // 5 < 6 
+				{
+					num2[k] = num2[i]; 
+					j--;
+					k--;
+				}
+				else
+				{
+					num2[k] = num1[j]; // 5 > 6
+					i--;
+					k--;
+				}
+			}
+			while(i >= 0)
+			{
+				num2[k] = num1[i];
+				i--;
+				k--;
+			}
+			for(int l = 0; l < num2.length; l++)
+			{
+				System.out.print(" "+num2[l]);
+			}
+		}
 		
 	}
 }
