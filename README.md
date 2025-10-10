@@ -102,11 +102,11 @@ Feel free to **open an issue** or **contribute**.
 ---
 
 ## 📩 Contact
-For any inquiries or collaborations, reach out to me at [your.email@example.com](mailto:aniketgudgal5867@gmail.com).
+For any inquiries or collaborations, reach out to me at [aniketgudgal5867@gmail.com](mailto:aniketgudgal5867@gmail.com).
 
 ---
 
 🔔 *Thank you for visiting! Keep learning and coding!* 💻
-For any inquiries or collaborations, reach out to me at [your.email@example.com](mailto:aniketgudgal5867@gmail.com).
+For any inquiries or collaborations, reach out to me at [aniketgudgal5867@gmail.com](mailto:aniketgudgal5867@gmail.com).
 
 ---
