@@ -107,6 +107,3 @@ For any inquiries or collaborations, reach out to me at [aniketgudgal5867@gmail.
 ---
 
 🔔 *Thank you for visiting! Keep learning and coding!* 💻
-For any inquiries or collaborations, reach out to me at [aniketgudgal5867@gmail.com](mailto:aniketgudgal5867@gmail.com).
-
----
