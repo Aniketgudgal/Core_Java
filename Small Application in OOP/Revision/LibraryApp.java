@@ -1,0 +1,169 @@
+/*
+Q1. Create a class called Library to hold accession number,title of the book,author name,price of the book and write a menu driven program in java that implements the working of a library :
+		The menu options should be: 
+		1. Add Book Details.
+		2. Display All Book Details.
+		3. Display List of all book of given author.
+		4. Display list the title of specified book.
+		5. Display list count of the book in the library.
+		6. Display list the books in the ascending order of accession number.
+		7. Update book details by title of book.
+		8. Delete book details by price.
+		9. Display the price range between 100 to 500.
+		10. Exit The Code.
+*/
+import java.util.Scanner;
+public class LibraryApp
+{
+	public static void main(String x[])
+	{
+		Scanner sc = new Scanner(System.in);
+		BookManagement bm = new BookManagement();
+		System.out.println("Enter the Number of Books. ");
+		int size = sc.nextInt();
+		Book b[] = new Book[size];
+		int select = 0; 
+		do
+		{
+			System.out.println("1. Add\n2. Display All Book Details \n3. Display List of all book of given author \n4. Display list the title of specified book \n5. Display list count of the book in the library \n6. Display list the books in the ascending order of accession number\n7. Update book details by title of book \n8. Delete book details by price \n10. Exit The Code");
+			select = sc.nextInt();
+			switch(select)
+			{
+				case 1: //1. Add Book Details.
+					bm.addBookDetails(b);
+					break;
+				case 2: // 2. Display All Book Details.
+					bm.displayAllBooksDetails(b);
+					break;
+				case 3: // 3. Display List of all book of given author.
+					bm.searchAuthor(b);
+					break;
+					
+				case 10: // 10. Exit The Code.
+					select = 10;
+					break;
+				default:
+					System.out.println("Enter the valid input");
+					//break;
+			}
+		}while(select != 10);
+	}
+}
+class BookManagement
+{
+	Book b[];
+	public void addBookDetails(Book b[])
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		for(int i = 0; i < b.length; i++)
+		{
+			System.out.println("Enter the Details of "+(i+1)+" Book");
+			System.out.println("Enter the Book number: ");
+			int number = sc.nextInt();
+			System.out.println("Enter Book name: ");
+			String name = sc.next();
+			System.out.println("Enter the Author Name: ");
+			String authorName = sc.next();
+			System.out.println("Enter the price: ");
+			int price = sc.nextInt();
+			
+			b[i] =  new Book();
+			b[i].setBookNumber(number);
+			b[i].setBookName(name);
+			b[i].setAuthorName(authorName);
+			b[i].setPrice(price);
+			System.out.println();
+			
+		}
+	}
+	public void displayAllBooksDetails(Book b[])
+	{
+		for(int i = 0; i < b.length; i++)
+		{
+			System.out.println();
+			System.out.println("Details of "+(i+1)+" Book");
+			System.out.println("Book number: "+b[i].getBookNumber());
+			System.out.println("Book name: "+b[i].getBookName());
+			System.out.println("Author Name: "+b[i].getAuthorName());
+			System.out.println("Price: "+b[i].getPrice());
+			System.out.println();
+			System.out.println();
+		}
+	}
+	public void searchAuthor(Book b[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Search Author name: ");
+		String name = sc.next();
+		boolean flag = false;
+		for(int i = 0; i < b.length; i++)
+		{
+			if(name.equals(b[i].getAuthorName()))
+			{
+				flag = true;
+			}
+		}
+		if(flag)
+		{
+			for(int i = 0; i < b.length; i++)
+			{
+				if(name.equals(b[i].getAuthorName()))
+				{
+					System.out.println();
+					System.out.println("Book number: "+b[i].getBookNumber());
+					System.out.println("Book name: "+b[i].getBookName());
+					System.out.println("Author Name: "+b[i].getAuthorName());
+					System.out.println("Price: "+b[i].getPrice());
+					System.out.println();
+				}
+				
+			}
+		}
+		else
+		{
+			System.out.println("There is no author");
+		}
+		System.out.println();
+	}
+}
+class Book
+{
+	private String bookName;
+	private int bookNumber;
+	private String authorName;
+	private int price;
+	
+	public void setBookName(String bookName)
+	{
+		this.bookName = bookName;
+	}
+	public String getBookName()
+	{
+		return bookName;
+	}
+	public void setBookNumber(int bookNumber)
+	{
+		this.bookNumber = bookNumber;
+	}
+	public int getBookNumber()
+	{
+		return bookNumber;
+	}
+	public void setAuthorName(String authorName)
+	{
+		this.authorName = authorName;
+	}
+	public String getAuthorName()
+	{
+		return authorName;
+	}
+	public void setPrice(int price)
+	{
+		this.price = price;
+	}
+	public int getPrice()
+	{
+		return price;
+	}
+}
