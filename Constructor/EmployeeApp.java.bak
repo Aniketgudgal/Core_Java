@@ -1,0 +1,58 @@
+/*
+Q1. Problem:
+ Create a class Employee with fields:
+empId, empName, basicSalary, hra, da, and grossSalary.
+Use a parameterized constructor to initialize empId, empName, and basicSalary.
+ HRA = 10% of basic, DA = 15% of basic, and Gross = Basic + HRA + DA.
+ Display all employee details and salary slip.
+Hint: Use constructor to calculate the salary.
+Explanation:
+ This helps you understand how constructors can perform initial calculations immediately after object creation.
+*/
+import java.util.Scanner;
+public class EmployeeApp
+{
+	public static void main(String x[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the id: ");
+		int id = sc.nextInt();
+		System.out.print("Enter the name: ");
+		String name = sc.next();
+		System.out.print("Enter the salary of Employee: ");
+		int salary = sc.nextInt();
+		Employee e1 = new Employee(id,name,salary);
+		int result = e1.getGrossSalary();
+		System.out.println("The Gross Salary of Employee is: "+result);
+	}
+}
+class Employee
+{
+	private int id;
+	private String name;
+	private int hra = 10;
+	private int da = 15;
+	private int salary;
+	Employee(int id, String name,int salary)
+	{
+		this.salary = salary;
+		this.id = id;
+		this.name = name;
+	}
+	public int getGrossSalary()
+	{
+		int clahra = (salary/100)*hra;
+		int clada = (salary/100)*da;
+		return (salary+clada+clahra);
+	}
+	
+	public void salarySlip()
+	{
+		System.out.println("Employee id: "+id);
+		System.out.println("The name of Employee is: "+name);
+		System.out.println("Basic salary of Employee is: "+salary);
+		System.out.println("HRA in % is: "+hra);
+		System.out.println("DA in % is: "+da);
+		System.out.println("The Gross Salary of Employee is: "+getGrossSalary());
+	}
+}
