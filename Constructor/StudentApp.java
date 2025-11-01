@@ -1,0 +1,43 @@
+/*
+Q2. Problem:
+ Create a class Student with fields rollNo, name, m1, m2, m3, and total.
+ Use a parameterized constructor to assign values to roll number, name, and marks.
+ Calculate total marks inside the constructor and display details using a function.
+Hint: Constructor should perform addition logic.
+Explanation:
+ Shows how to use constructors to initialize and process multiple fields at once.
+*/
+public class StudentApp
+{
+	public static void main(String x[])
+	{
+			Student s1 = new Student(1,"Aniket",50,50,50);
+			s1.displayTotal();
+	}
+}
+class Student
+{
+	private int rollNo;
+	private String name;
+	private int m1;
+	private int m2;
+	private int m3;
+	private int total;
+	
+	Student(int rollNo, String name, int m1, int m2, int m3)
+	{
+		this.rollNo = rollNo;
+		this.name = name;
+		this.m1 = m1;
+		this.m2 = m2;
+		
+		this.m3 = m3;
+		
+		total = m1 + m2 + m3;
+	}
+	
+	public void displayTotal()
+	{
+		System.out.println("The Total marks is: "+total);
+	}
+}
