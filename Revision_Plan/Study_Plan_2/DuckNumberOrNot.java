@@ -1,0 +1,33 @@
+/*
+Write program to input number using Scanner class and check this number duck or not?
+*/
+import java.util.Scanner;
+public class DuckNumberOrNot
+{
+	public static void main(String x[])
+	{
+		Scanner sc = new Scanner(System.in);
+		// using Scanner class
+		System.out.print("Enter the Number: ");
+		int num = sc.nextInt();
+		boolean flag = false;
+		while(num != 0)
+		{
+			if((num % 10) == 0)
+			{
+				flag = true;
+				break;
+			}
+			num /= 10;
+		}
+		
+		if(flag)
+		{
+			System.out.println("The Number is Duck");
+		}
+		else
+		{
+			System.out.println("Not a Duck Number");
+		}
+	}
+}
