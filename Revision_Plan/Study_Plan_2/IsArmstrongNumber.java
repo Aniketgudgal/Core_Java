@@ -1,0 +1,42 @@
+/*
+Write program to input number and check number is Armstrong or not?
+*/
+public class IsArmstrongNumber
+{
+	public static void main(String x[])
+	{
+		int num = Integer.parseInt(x[0]);
+		int temp = num;
+		int count = 0;
+		while(temp != 0)
+		{
+			count++;
+			temp /= 10;
+		}
+		temp = num;
+		
+		int sum = 0;
+		while(temp != 0)
+		{
+			int rem = temp % 10;
+			int i = 1;
+			int fact = 1;
+			while(i <= count)
+			{
+				fact = fact * rem;
+				i++;
+			}
+			sum += fact;
+			temp /= 10;
+		}
+		
+		if(sum == num)
+		{
+			System.out.println("The Given Number is Armstrong");
+		}
+		else
+		{
+			System.out.println("Not a Armstrong Number");
+		}
+	}
+}
