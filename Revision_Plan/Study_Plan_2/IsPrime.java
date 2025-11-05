@@ -1,0 +1,30 @@
+/*
+Write program to check number is prime or not?
+*/
+public class IsPrime
+{
+	public static void main(String x[])
+	{
+		int num = Integer.parseInt(x[0]);
+		boolean flag = true;
+		int i = 2;
+		while(i < num)
+		{
+			if(num % i == 0)
+			{
+				flag = false;
+				break;
+			}
+			i++;
+		}
+		
+		if(flag)
+		{
+			System.out.println("The Given Number is Prime");
+		}
+		else
+		{
+			System.out.println("Not A Prime");
+		}
+	}
+}
