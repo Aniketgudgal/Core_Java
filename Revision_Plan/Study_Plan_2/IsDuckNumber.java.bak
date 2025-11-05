@@ -1,0 +1,29 @@
+/*
+Write program to input number and check number is duck or not?
+*/
+public class IsDuckNumber
+{
+	public static void main(String x[])
+	{
+		int num = Integer.parseInt(x[0]);
+		boolean flag = false;
+		while(num != 0)
+		{
+			int rem = num % 10;
+			if(rem == 0)
+			{
+				flag true;
+				break;
+			}
+			num /= 10;
+		}
+		if(flag)
+		{
+			System.out.println("The Number is Duck");
+		}
+		else
+		{
+			System.out.println("Not Duck Number");
+		}
+	}
+}
