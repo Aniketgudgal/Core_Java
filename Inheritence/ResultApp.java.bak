@@ -1,0 +1,63 @@
+/*
+4. Question:
+ Create a class Student with fields name and marks. Create subclass EngineeringStudent and MedicalStudent.
+If marks >= 50, student passes. Otherwise fails.
+ Display results for both types of students using an overridden method.
+
+
+Explanation:
+ This tests inheritance for common fields and customized result display logic.
+*/
+class Student
+{
+	String name;
+	int marks;
+}
+class EngineeringStudent extends Student
+{
+	void displayResult()
+	{
+		if(marks >= 50)
+		{
+			System.out.println("The "+name+ " is Pass");
+			System.out.println("Marks is: "+marks);
+		}
+		else
+		{
+			System.out.println("The "+name+" is fails");
+			System.out.println("Marks is: "+marks+" Requried is: 50 above");
+		}
+	}
+}
+class MedicalStudent extends Student
+{
+		void displayResult()
+		{
+			if(marks >= 50)
+			{
+				System.out.println("The "+name+ " is Pass");
+				System.out.println("Marks is: "+marks);
+			}
+			else
+			{
+				System.out.println("The "+name+" is fails");
+				System.out.println("Marks is: "+marks+" Requried is: 50 above");
+			}
+		}
+}
+public class ResultApp
+{
+	public static void main(String x[])
+	{
+		EngineeringStudent e = new EngineeringStudent();
+		e.name = "ag";
+		e.marks = 50;
+		
+		MedicalStudent m = new MedicalStudent();
+		m.name = "ak";
+		m.marks = 85;
+		
+		e.displayResult();
+		m.displayResult();
+	}
+}
