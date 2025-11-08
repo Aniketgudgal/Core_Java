@@ -1,0 +1,56 @@
+/*
+1. Question:
+ Create a base class Employee with fields name and salary. Create subclasses Manager and Developer.
+Manager gets a 20% bonus on salary.
+
+
+Developer gets a 10% bonus.
+ Write a program to calculate and display the total salary (base + bonus) for each employee.
+Explanation:
+ This tests how to use inheritance to share fields/methods and override logic for bonus calculations.
+*/
+import java.util.Scanner;
+class Employee 
+{
+	String name;
+	int salary;
+}
+class Manager extends Employee
+{
+	
+	void displaySalary()
+	{
+		int bonus = 20;
+		float netSalary = (bonus*salary)/100;
+		System.out.println("Bouns Amount is: "+netSalary);
+		System.out.println("Salary of Manager is: "+((float)salary + netSalary));
+	}
+}
+class Developer extends Employee
+{
+	void displaySalary()
+	{
+		int bonus = 10;
+		float netSalary = (bonus*salary)/100;
+		System.out.println("Bouns Amount is: "+netSalary);
+		System.out.println("Salary of Manager is: "+((float)salary + netSalary));
+	}
+}
+public class BounsCalApp
+{
+	public static void main(String x[])
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		Manager m1 = new Manager();
+		m1.salary = 2000;
+		m1.name = "yd";
+		m1.displaySalary();
+		
+		Developer d1 = new Developer();
+		d1.salary = 5000;
+		d1.name = "AG";
+		
+		d1.displaySalary();
+	}
+}
