@@ -19,10 +19,14 @@ class Order
 	{
 		return 0;
 	}
+	int cashback()
+	{
+		return 0;
+	}
 	void finalBill()
 	{
-		System.out.println("Order id: "+orderId + " Order Amount: "+amount+" Devliery charges: "+bill());
-		System.out.println("Total Bill is: "+(amount+bill()));
+		System.out.println("Order id: "+orderId + " Order Amount: "+amount+" Devliery charges: "+bill()+" cashback: "+cashback());
+		System.out.println("Total Bill is: "+(amount+bill()-cashback()));
 	}
 }
 class CODOrder extends Order
@@ -37,6 +41,11 @@ class OnlinePaymentOrder extends Order
 	int bill()
 	{
 		return 0;
+	}
+	int cashback()
+	{
+		int dis = 5;
+		return ((dis*amount)/100);
 	}
 }
 class OrderApp
