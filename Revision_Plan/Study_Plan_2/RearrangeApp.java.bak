@@ -1,0 +1,73 @@
+/*
+8. Rearrange Array in Alternate Positive and Negative Items
+Concept: Use auxiliary arrays or index manipulation to interleave.
+ Use Case: Alternate scheduling, balancing data flow.
+Input: arr = [2, 3, -4, -1, 6, -9]
+ 
+Separate positives: [2, 3, 6]
+Separate negatives: [-4, -1, -9]
+Rearranged array: [2, -4, 3, -1, 6, -9]
+*/
+import java.util.Scanner;
+public class RearrangeApp
+{
+	public static void main(String x[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the array size: ");
+		int size = sc.nextInt();
+		int num[] = new int[size];
+		System.out.print("Enter the values in Array: ");
+		for(int i = 0; i < num.length; i++)
+		{
+			num[i] = sc.nextInt();
+		}
+		int p = 0,n = 0;
+		for(int i =0; i < num.length; i++)
+		{
+			if(num[i] > 0)
+			{
+				p++;
+			}
+			else
+			{
+				n++;
+			}
+		}
+		int[] pos = new int[p];
+		int[] neg = new int[n];
+		p = 0 , n = 0;
+		for(int i = 0; i < num.length; i++)
+		{
+			if(num[i] > 0)
+			{
+				pos[p] = num[i];
+				p++;
+			}
+			else
+			{
+				neg[n] = num[i];
+				n++;
+			}
+		}
+		p = 0;
+		n = 0;
+		for(int i = 0; i < num.length; i++)
+		{
+			if(i % 2 == 0)
+			{
+				num[i] = pos[p];
+				p++;
+			}
+			else
+			{
+				num[i] = neg[n];
+				n++;
+			}
+		}
+		for(int i = 0; i < num.length; i++)
+		{
+			System.out.print(" "+num[i]);
+		}
+	}
+}
