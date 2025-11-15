@@ -1,0 +1,18 @@
+public class Test
+{
+	public static void main(String x[])
+	{
+		// basic of data types
+		System.out.println(10+20+"30"+50+60);
+		double d = 0.0d/0.0d;
+		System.out.println(d);
+		byte b = 123;
+		byte a = 123;
+		//byte c = a+b;
+		int c = a+b;
+		System.out.println(d);
+		byte k = (byte)130;
+		System.out.println(k);
+		System.out.println(~5);
+	}
+}

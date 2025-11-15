@@ -19,6 +19,7 @@ class Add extends Value
 {
 	int getResult()
 	{
+		super().Value;
 		return a+b;
 	}
 }
@@ -57,17 +58,10 @@ public class Operation
 		v = new Add();
 		v.setValue(a,b);
 		op.operationResult(v);
-		/*
-		int result = v.getResult();
-		System.out.println("Addition is: "+result);
-		
+	
 		v = new Mul();
-		result = v.getResult();
-		System.out.println("Multiplication is: "+result);
+		v.setValue(a,b);
+		op.operationResult(v);
 		
-		v = new Div();
-		result = v.getResult();
-		System.out.println("Division is: "+result);
-		*/
 	}
 }
