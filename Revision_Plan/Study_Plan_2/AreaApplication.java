@@ -1,0 +1,62 @@
+/*
+Q2. Write program to create class name Area with methods name as void setRadius(float   radius) and void setLengthWidth(int len,int wid) and two child classes name as Circle and Rectangle so you have to define float getCircleArea() method in Circle child class and calculate area of circle and return it and You have to define getRectArea() method in Rectangle class and calculate area of rectangle and return it
+*/
+import java.util.Scanner;
+class Area
+{
+	float radius;
+	int len, wid;
+	float PI;
+	Area()
+	{
+		PI = 3.14f;
+	}
+	void setRadius(float radius)
+	{
+		this.radius = radius;
+	}
+	void setLengthWidth(int len, int wid)
+	{
+		this.len = len;
+		this.wid = wid;
+	}
+}
+class Circle extends Area
+{
+	float getCircleArea()
+	{
+		return PI*radius*radius;
+	}
+}
+class Rectangle extends Area
+{
+	int getRectArea()
+	{
+		return len*wid;
+	}
+}
+public class AreaApplication
+{
+	public static void main(String x[])
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter the radius of circle: ");
+		int radius = sc.nextInt();
+		
+		Circle c = new Circle();
+		c.setRadius(radius);
+		float result = c.getCircleArea();
+		System.out.println("The Area of Circle is: "+result);
+		
+		System.out.print("Enter the length of Rectangle: ");
+		int len = sc.nextInt();
+		System.out.print("Enter the Width of Rectangle: ");
+		int wid = sc.nextInt();
+		Rectangle r = new Rectangle();
+		r.setLengthWidth(len,wid);
+		
+		result = r.getRectArea();
+		System.out.println("The Area of Rectangle is: "+result);
+	}
+}
