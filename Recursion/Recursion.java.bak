@@ -2,18 +2,18 @@ public class Recursion
 {
 	public static void main(String x[])
 	{
-		call(1,3);
+		call(3,3);
 	}
 	static int call(int i,int n)
 	{
-		if(i > n)
+		if(i < 1)
 		{
 			return 0;
 		}
 		else
 		{
 			System.out.println(i);
-			return call(i+1,n);
+			return call(i-1,n);
 		}
 	}
 }

@@ -12,8 +12,8 @@ public class Recursion
 		}
 		else
 		{
-			return call(i+1,n);
 			System.out.println(i);
+			return call(i+1,n);
 		}
 	}
 }
