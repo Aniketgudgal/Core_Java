@@ -1,0 +1,32 @@
+abstract class Circle
+{
+	float rd,PI;
+	Circle(float rd)
+	{
+		this.rd = rd;
+		PI = 3.14f;
+	}
+	abstract float getCircle();
+}
+class Area extends Circle
+{
+	Area(float rd)
+	{
+		super(rd);
+	}
+	float getCircle()
+	{
+		return rd*rd;
+	}
+}
+
+public class AbstractionApp
+{
+	public static void main(String x[])
+	{
+		Circle c = null;
+		c = new Area(3.0f);
+		float result = c.getCircle();
+		System.out.println("The area: "+result);
+	}
+}
