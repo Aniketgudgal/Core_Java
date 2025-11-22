@@ -9,7 +9,7 @@ class B extends A
 {
 	B(int x)
 	{
-		super(200);
+		super(x);
 		System.out.println("B constructor with value: "+x);
 	}
 }
@@ -17,7 +17,12 @@ class C extends B
 {
 	C(int x)
 	{
-		super(200);
+		super(x);
+		this(5.2f);
+		System.out.println("C constructor with value: "+x);
+	}
+	C(float x)
+	{
 		System.out.println("C constructor with value: "+x);
 	}
 }
