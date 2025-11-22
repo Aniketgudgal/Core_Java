@@ -1,0 +1,30 @@
+class A
+{
+	A(int x)
+	{
+		System.out.println("A constructor with value: "+x);
+	}
+}
+class B extends A
+{
+	B(int x)
+	{
+		super(x);
+		System.out.println("B constructor with value: "+x);
+	}
+}
+class C extends B
+{
+	C(int x)
+	{
+		super(x);
+		System.out.println("C constructor with value: "+x);
+	}
+}
+public class ApplicationConstructor
+{
+	public static void main(String x[])
+	{
+		C c1 = new C(100);
+	}
+}
