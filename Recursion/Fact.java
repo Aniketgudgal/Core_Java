@@ -1,0 +1,22 @@
+public class Fact
+{
+	public static void main(String x[])
+	{
+		int n = 5;
+		int factNum = fact(n,1);
+		System.out.println("factorial is: "+factNum);
+	}
+	static int fact(int n, int fact)
+	{
+		if(n == 0)
+		{
+			System.out.println(fact);
+			return fact;
+		}
+		else
+		{
+			System.out.println(n+" "+fact);
+			return fact(n - 1,fact*n);
+		}
+	}
+}
