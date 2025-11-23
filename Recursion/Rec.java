@@ -1,0 +1,32 @@
+public class Rec
+{
+	public static void main(String x[])
+	{
+		RecCal r = new RecCal();
+		r.call(5,0);
+	}
+}
+class RecCal
+{
+	void call(int i, int n)
+	{
+		if(i < 1)
+		{
+		}
+		else
+		{
+			call(i-1,n);
+			System.out.println(i);
+		}
+		/*
+		if(i > n)
+		{
+		}
+		else
+		{
+			call(i+1,n);
+			System.out.println(i+" "+n );
+		}
+		*/
+	}
+}
