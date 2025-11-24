@@ -14,7 +14,16 @@ public class CountAllPairs
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the value of k: ");
 		int k = sc.nextInt(); // take the value k from user
-		int[] num = {1,5,3,4,2};
+		System.out.print("Enter the size of array: ");
+		int size = sc.nextInt();
+		int[] num = new int[size];
+		// input array from user
+		System.out.print("Enter the value in Array: ");
+		for(int i = 0; i < num.length; i++)
+		{
+			num[i] = sc.nextInt();
+		}
+		// logic to find out the pairs
 		for(int i = 0; i < num.length - 1; i++)
 		{
 			for(int j = i+1; j < num.length; j++)
