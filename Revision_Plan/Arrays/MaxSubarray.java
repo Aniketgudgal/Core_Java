@@ -9,22 +9,26 @@ public class MaxSubarray
 {
 	public static void main(String x[])
 	{
-		int[] num = {-2, 1 ,-3, 4 , -1 , 2 , 1, -5 , 4};
-		int s = 1;
+		int[] num = {-2, 1,  -3,   4,   -1,  2,  1,   -5  ,4};
+		int s = 0;
 		int e = 0;
 		int sum = 0;
 		int max = 0;
 		while(s < num.length)
 		{
 			sum = sum + num[s];
-			while(sum >= max)
+			if(sum < 0)
 			{
+				sum = 0;
+			}
+			if(sum > max)
+			{
+				max = sum;
 				if(sum > max)
 				{
-					max = sum;
+					sum  = sum - num[e];
+					e++;
 				}
-				sum  = sum - num[e];
-				e++;
 			}
 			s++;
 		}
