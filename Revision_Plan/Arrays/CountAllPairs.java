@@ -32,11 +32,13 @@ public class CountAllPairs
 				{
 					if((num[i] - num[j]) == k)
 					{
+						// print the pair
 						System.out.println("("+num[i]+" , "+num[j]+")");
 					}
 				}
 				else
 				{
+					// print the pair
 					if((num[j] - num[i]) == k)
 					{
 						System.out.println("("+num[i]+" , "+num[j]+")");
