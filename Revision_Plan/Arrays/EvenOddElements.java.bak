@@ -18,8 +18,10 @@ public class EvenOddElements
 		int[] nums = new int[size];
 		
 		// take input from user of array elements
-		for(int i = 0; i < nums.eln
-		)
+		for(int i = 0; i < nums.length; i++)
+		{
+			nums[i] = sc.nextInt();
+		}
 		int even = 0 , odd = 0;
 		for(int i = 0; i < nums.length; i++)
 		{
