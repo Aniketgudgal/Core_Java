@@ -1,0 +1,40 @@
+/*
+5. Find Missing Number in 1 to N
+Problem:
+Find a missing number from 1 to N in array of N-1 size.
+Example:
+Input: [1, 2, 4, 5], N = 5  
+Output: 3
+*/
+import java.util.Scanner;
+public class MissingNumberArray
+{
+	public static void main(String x[])
+	{
+		Scanner sc = new Scanner(System.in);
+		// take the array input from user
+		System.out.print("Enter the size of array: ");
+		int size = sc.nextInt();
+		int[] num = new int[size];
+		// take the arrays value from user
+		System.out.print("Enter the value in array: ");
+		for(int k = 0; k < num.length; k++)
+		{
+			num[k] = sc.nextInt();
+		}
+		int i = 1;
+		while(i < num.length)
+		{
+			if(num[i] - num[i-1] != 1) // check the each value
+			{
+				int j = num[i-1]+1; // take the next value of missing number to print
+				while(j < num[i])
+				{
+					System.out.print(" "+j); // print the missing number
+					j++;
+				}
+			}
+			i++;
+		}
+	}
+}
