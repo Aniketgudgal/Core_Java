@@ -20,7 +20,8 @@ public class DistinctPairs
 		{
 			nums[i] = sc.nextInt();
 		}
-		int target = 5;
+		System.out.print("Enter the difference values: ");
+		int target = sc.nextInt();
 		int count = 0;
 		for(int i = 0; i < nums.length - 1; i++)
 		{
