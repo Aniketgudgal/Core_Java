@@ -12,7 +12,14 @@ public class RepeatingNumber
 	public static void main(String x[])
 	{
 		Scanner sc = new Scanner(System.in);
-		int[] nums = {2,3,3,5,3,4,1,7,7,7,7};
+		System.out.print("Enter the size of Array: ");
+		int size = sc.nextInt();
+		int[] nums = new int[size];
+		System.out.print("Enter the values in array: ");
+		for(int i = 0; i < nums.length; i++)
+		{
+			nums[i] = sc.nextInt();
+		}
 		int num = 0;
 		int count = 1;
 		int maxCount = 0;
