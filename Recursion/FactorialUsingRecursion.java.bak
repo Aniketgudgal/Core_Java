@@ -11,7 +11,7 @@ public class FactorialUsingRecursion
 	}
 	static int factCal(int n, int fact)
 	{
-		if(n < 0)
+		if(n < 1)
 		{
 			return fact;
 		}

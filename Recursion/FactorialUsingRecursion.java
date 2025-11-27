@@ -1,11 +1,14 @@
 /*
 Write a program to calculate the factorial of a given number using recursion.
 */
+import java.util.Scanner;
 public class FactorialUsingRecursion
 {
 	public static void main(String x[])
 	{
-		int n = 5;
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the value: ");
+		int n = sc.nextInt();
 		int result = factCal(n,1);
 		System.out.println("The factorial of number is: "+result);
 	}
