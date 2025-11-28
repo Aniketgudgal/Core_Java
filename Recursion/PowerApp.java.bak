@@ -1,0 +1,28 @@
+/*
+Write a program to calculate the power of a number (x^n) using recursion.
+*/
+import java.util.Scanner;
+public class PowerApp
+{
+	public static void main(String x[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the base value: ");
+		int base = sc.nextInt();
+		System.out.print("Enter the power: ");
+		int power = sc.nextInt();
+		int result = powerCal(base,power, 1);
+		System.out.println("The power is: "+result);
+	}
+	static int powerCal(int base, int power, int sum)
+	{
+		if(power < 1)
+		{
+			return sum;
+		}
+		else
+		{
+			return powerCal(base, power - 1, sum*base);
+		}
+	}
+}
