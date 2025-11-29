@@ -1,0 +1,25 @@
+/*
+Write a program to print the first n Fibonacci numbers using recursion.
+*/
+import java.util.Scanner;
+public class FibonacciNumberRec
+{
+	public static void main(String x[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the first n number: ");
+		int n = sc.nextInt();
+		printFib(0,1,0,n);
+	}
+	static void printFib(int f1, int f2, int sum, int n)
+	{
+		if(n < 1)
+		{ return;
+		}
+		System.out.println(" "+sum);
+		f1 = f2;
+		f2 = sum;
+		sum = f1+f2;
+		printFib(f1,f2 ,sum,n-1);
+	}
+}
