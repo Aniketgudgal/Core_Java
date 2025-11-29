@@ -1,0 +1,27 @@
+/*
+Write a program to print numbers from 1 to n using recursion.
+*/
+import java.util.Scanner;
+public class PrintNumberInForward
+{
+	public static void main(String x[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the number: ");
+		int num = sc.nextInt();
+		printForward(1,num);
+	}
+	static void printForward(int i, int num)
+	{
+		if(i > num)
+		{
+			System.out.println();
+			System.out.println("Base condition");
+		}
+		else
+		{
+			System.out.print(i+" ");
+			printForward(i+1, num);
+		}
+	}
+}
