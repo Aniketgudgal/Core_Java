@@ -154,24 +154,25 @@ public class Transport
 	public static void main(String x[])
 	{
 		Scanner sc = new Scanner(System.in);
-		Truck t1 = new Truck("mahindra","1234",80,150,15,1000);
+		Vehicle v = null;
+		v = new Truck("mahindra","1234",80,150,15,1000);
 		System.out.println("Enter the distance: ");
 		int distance = sc.nextInt();
-		System.out.println("The fuel Needed is: "+t1.fuelNeeded(distance));
+		System.out.println("The fuel Needed is: "+v.fuelNeeded(distance));
 		System.out.println("Ente the time: ");
 		int time = sc.nextInt();
-		System.out.println("The distance covered: "+t1.distanceCovered(time));
+		System.out.println("The distance covered: "+v.distanceCovered(time));
 		System.out.println("All Detail of truck");
-		t1.display();
+		v.display();
 		
-		Bus b1 = new Bus("Honda","123",50,100,50,50);
+		v = new Bus("Honda","123",50,100,50,50);
 		System.out.println("Enter the distance: ");
 		distance = sc.nextInt();
-		System.out.println("The fuel Needed is: "+b1.fuelNeeded(distance));
+		System.out.println("The fuel Needed is: "+v.fuelNeeded(distance));
 		System.out.println("Ente the time: ");
 		time = sc.nextInt();
-		System.out.println("The distance covered: "+b1.distanceCovered(time));
+		System.out.println("The distance covered: "+v.distanceCovered(time));
 		System.out.println("All Details of bus");
-		b1.display();
+		v.display();
 	}
 }
