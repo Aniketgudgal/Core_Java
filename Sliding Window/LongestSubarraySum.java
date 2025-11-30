@@ -7,8 +7,19 @@ public class LongestSubarraySum
 	public static void main(String x[])
 	{
 		Scanner sc = new Scanner(System.in);
-		int[] arr = {1, 2, 1, 0, 1, 1, 0};
-		int k = 4;
+		// take the size of array
+		System.out.print("Enter the size of array: ");
+		int size = sc.nextInt();
+		int[] arr = new int[size];
+		// Input the array elements from user
+		System.out.print("Enter the values in array: ");
+		for(int i = 0; i < arr.length; i++)
+		{
+			arr[i] = sc.nextInt();
+		}
+		// take the target value
+		System.out.print("Enter the target value k: ");
+		int k = sc.nextInt();
 		int start = 0;
 		int end = 0;
 		int sum = 0;
