@@ -105,6 +105,7 @@ class Intern extends Employee
 class Company
 {
 	Employee[] emp;
+	Employee e;
 	void setObjecet(Employee[] emp)
 	{
 		this.emp = emp;
@@ -166,9 +167,13 @@ class Company
 			if(emp[i].calculateSalary() > maxSalary)
 			{
 				maxSalary = emp[i].calculateSalary();
+				e = emp[i];
 			}
 		}
 		System.out.println("The max Salary is: "+maxSalary);
+		System.out.println("id: "+e.id);
+		System.out.println("name: "+e.name);
+		System.out.println("salary: "+e.baseSalary);
 	}
 	void earnAbove(int amount)
 	{
