@@ -1,0 +1,38 @@
+/*
+print prime number in pattern
+*/
+public class PrimeNumberPrint
+{
+	public static void main(String x[])
+	{
+		int n = 5;
+		int k = 2;
+		for(int i = 1; i <= n; i++)
+		{
+			int j = 0;
+			while(j < i)
+			{
+				if(isPrime(k))
+				{
+					System.out.print(k);
+					j++;
+				}
+				k++;
+			}
+			System.out.println();
+		}
+	}
+	static boolean isPrime(int n)
+	{
+		if(n < 2)
+			return false;
+		for(int i = 2; i <= n / 2; i++)
+		{
+			if(n % i == 0)
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+}
