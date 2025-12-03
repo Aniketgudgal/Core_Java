@@ -1,0 +1,52 @@
+/*
+Frequence of each digit
+*/
+import java.util.Scanner;
+public class FrequenceDigit
+{
+	public static void main(String x[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the number: ");
+		int n = sc.nextInt();
+		/*
+		// method 1
+		int temp = n;
+		while(temp != 0)
+		{
+			int rem = temp % 10;
+			int p = n;
+			int count = 0;
+			while(p != 0)
+			{
+				int check = p % 10;
+				if(check == rem)
+					count++;
+				p /= 10;
+			}
+			System.out.println("Frequence of "+rem+" is: "+count);
+			temp /= 10;
+		}
+		*/
+		// method 2
+		int i = 0;
+		int temp = n;
+		while(i < 10)
+		{
+			int count = 0;
+			while(temp != 0)
+			{
+				int rem = temp % 10;
+				if(rem == i)
+					count++;
+				temp /= 10;
+			}
+			if(count > 0)
+			{
+				System.out.println("The Frequence of "+i+" is: "+count);
+			}
+			i++;
+			temp = n;
+		}
+	}
+}
