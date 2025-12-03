@@ -7,7 +7,7 @@ public class StrongNumber
 		System.out.print("Enter the n th number: ");
 		int nth = sc.nextInt();
 		int i = 1;
-		while(i <= n)
+		while(i <= nth)
 		{
 		int temp = i;
 		int sum = 0;
