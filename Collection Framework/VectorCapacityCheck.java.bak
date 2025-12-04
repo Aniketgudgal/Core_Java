@@ -1,0 +1,13 @@
+/*
+program to check the default value of vector
+*/
+import java.util.Vector;
+public class VectorCapacityCheck
+{
+	public static void main(String x[])
+	{
+		Vector v = new Vector();
+		int capacity = v.capacity();
+		System.out.println("The Default value of vector is: "+capacity);
+	}
+}
