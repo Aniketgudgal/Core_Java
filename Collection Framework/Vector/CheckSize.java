@@ -1,5 +1,6 @@
 import java.util.Vector; // import class
 import java.util.List; // import interface
+import java.util.*;
 public class CheckSize
 {
 	public static void main(String x[])
@@ -10,5 +11,21 @@ public class CheckSize
 		int size = l.size();
 		System.out.println("The size of Vector is: "+size);
 		System.out.println("Check empty condition: "+l.isEmpty());
+		l.add(200);
+		// contain method
+		System.out.println("Check element is present or not: "+l.contains(200));
+		System.out.println(l);
+		Iterator ls = l.iterator();
+		while(ls.hasNext())
+		{
+			Object obj = ls.next();
+			System.out.println(obj);
+		}
+		Object obj[] = l.toArray();
+		System.out.println(obj);
+		for(Object o : obj)
+		{
+			System.out.println(o);
+		}
 	}
 }
