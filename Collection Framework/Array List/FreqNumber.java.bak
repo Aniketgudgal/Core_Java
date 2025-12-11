@@ -1,0 +1,25 @@
+/*
+Q4. Take an integer array with repeated values. Store it in an ArrayList and print the frequency of each unique number.
+What you practice:
+Traversing ArrayList
+Using another ArrayList to track visited elements
+Logical counting
+*/
+import java.util.*;
+public class FreqNumber
+{
+	public static void main(String x[])
+	{
+		Scanner sc = new Scanner(System.in);
+		ArrayList al = new ArrayList();
+		System.out.print("Enter the total values insert into array list: ");
+		int n = sc.nextInt();
+		for(int i = 1; i <= n; i++)
+		{
+			System.out.print("Enter the "+i" value: ");
+			int num = sc.nextInt();
+			al.add(num);
+		}
+		System.out.println("The values in Arraylist is: "+al);
+	}
+}
