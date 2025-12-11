@@ -35,6 +35,10 @@ public class SecondMax
 				secondMax = max;
 				max = (int)vr.get(i);
 			}
+			if((int)vr.get(i) > secondMax && (int)vr.get(i) < max)
+			{
+				secondMax = (int)vr.get(i);
+			}
 		}
 		System.out.println("The max is: "+max);
 		System.out.println("The second max is: "+secondMax);
