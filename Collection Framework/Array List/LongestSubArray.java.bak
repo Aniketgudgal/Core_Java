@@ -22,6 +22,7 @@ public class LongestSubArray
 			int number = sc.nextInt();
 			num.add(number);
 		}
+		System.out.println(num);
 		// taking the value of k 
 		System.out.print("Enter the value of K: ");
 		int k = sc.nextInt();
@@ -34,8 +35,9 @@ public class LongestSubArray
 		int el = 0;
 		while(s < num.size())
 		{
-			sum = sum + (int)num.get(s);
-			if(sum <= k) // checking the sum is <= k if yes then check inner condition of max length
+			sum = sum + (int)num.get(s); // -1 -2 // -3
+			System.out.println(sum); // -1 <= -3 
+			if(sum >= k) // checking the sum is <= k if yes then check inner condition of max length
 			{
 				if((s-e+1)> maxLen)
 				{
@@ -44,22 +46,27 @@ public class LongestSubArray
 					el = s;
 				}
 			}
-			while(sum > k) // if sum is > k then remove last elements from subarray
+			while(sum <= k) // if sum is > k then remove last elements from subarray
 			{
 				sum = sum - (int)num.get(e);
 				e++; // shift index or increase index by 1
-				if(sum <= k) // checking  sum is <= k if yes then store max length
+				/*if(sum <= k) // checking  sum is <= k if yes then store max length
 				{
-					if(s-e+1> maxLen)
+					if((s-e+1)> maxLen)
 					{
 						maxLen = s-e+1;
 						st = e;
 						el = s;
 					}
 				}
+				*/
 			}
 			s++;
 		}
 		System.out.println("Max Length is: "+maxLen); // print max subarray with sum is less than equal to k 
+		for(int i = st; i <= el; i++)
+		{
+			System.out.print(" "+num.get(i));
+		}
 	}
 }
