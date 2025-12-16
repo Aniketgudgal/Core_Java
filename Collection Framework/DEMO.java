@@ -3,7 +3,7 @@ public class DEMO
 {
 	public static void main(String x[])
 	{
-		ArrayList al = new ArrayList();
+		/*ArrayList al = new ArrayList();
 		al.add(100);
 		al.add(200);
 		al.add(300);
@@ -21,5 +21,11 @@ public class DEMO
 		{
 			System.out.println("Not present");
 		}
+		*/
+		main(10,20);
+	}
+	public static void main(int a , int b)
+	{
+		System.out.println(a+"\t"+b);
 	}
 }
