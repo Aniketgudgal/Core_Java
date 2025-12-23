@@ -1,12 +1,15 @@
+// importing required classes and interface
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collections;
+// Comparable interface for sorting the user define objects
 class Employee implements Comparable
 {
+	// use POJO class to achive Encapsulation
 	private int id;
 	private String name;
 	private int salary;
-
+	// Constructor to Initialization of Object Entity
 	public Employee(int id, String name, int salary)
 	{
 		this.id = id;
@@ -37,9 +40,14 @@ class Employee implements Comparable
 	{
 		return salary;
 	}
+	// compareTo  method from comparable interface help us to sort the objects of the class
 	public int compareTo(Object o)
 	{
-		Employee e = (Employee)o;
+		// down cast object to avoid error
+		Employee e = (Employee)o; 
+		// this method return if current object value is greater then return 1, if less then return -1, otherwise if values are equal then return 0 to not sort value
+		
+		// this sorting only happends with the help of object id of class Employee
 		if(this.id > e.id)
 		{
 			return 1;
@@ -62,20 +70,23 @@ public class CompApplication
 		Employee e2 = new Employee(2,"Gokul",4000);
 		Employee e3 = new Employee(3,"Omkar",6000);
 		List s = new ArrayList();
+		// store user define object into array list
 		s.add(e2);
 		s.add(e1);
 		s.add(e3);
+		// fetch data from array list
 		for(Object obj:s)
 		{
-			Employee e = (Employee)obj;
+			Employee e = (Employee)obj; // down cast object into Employee class
 			System.out.println(e.getId()+"\t"+e.getName() +"\t"+e.getSalary());
 		}
 		System.out.println();
-		Collections.sort(s);
+		Collections.sort(s); // passing collection as object to sort method.
+		// display user define sorted data 
 		System.out.println("After Sorting");
 		for(Object obj:s)
 		{
-			Employee e = (Employee)obj;
+			Employee e = (Employee)obj; // down cast object into Employee class
 			System.out.println(e.getId()+"\t"+e.getName()+"\t"+e.getSalary());
 		}
 	}
