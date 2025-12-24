@@ -84,19 +84,19 @@ class OverTime
 		Scanner sc = new Scanner(System.in);
 		for(int i = 0; i < emp.length; i++)
 		{
-			System.out.print("Enter the id of"+i+" Employee: ");
+			System.out.print("Enter the id of "+(i+1)+" Employee: ");
 			int id = sc.nextInt();
 			System.out.print("Enter the name of Employee: ");
 			String name = sc.next();
 			System.out.print("Enter Basic salary of Employee: ");
 			int salary = sc.nextInt();
-			int dailyWork = 8;
 			int[] dailyHours = new int[7];
+			int dailyOverTime = 0;
 			for(int j = 0; j < dailyHours.length; j++)
 			{
 				System.out.print("Enter the dailyOT of "+(j+1)+" daily: ");
-				int dailyOverTime = sc.nextInt();
-				dailyHours[i] = dailyOverTime + dailyWork;
+				dailyOverTime = sc.nextInt();
+				dailyHours[j] = dailyOverTime;
 			}
 			emp[i] = new Employee();
 			emp[i].setId(id);
@@ -110,20 +110,22 @@ class OverTime
 		for(int i = 0; i < emp.length; i++)
 		{
 			int sum = 0;
+			int[] arr = emp[i].getDailyHours();
 			for(int j = 0; j < arr.length; j++)
 			{
-				int count = arr[i];
-				int result = count - 8;
-				sum += result;
+				sum += arr[j];
 			}
+			sum = sum - (8*arr.length);
 			emp[i].setDailyOT(sum);
 		}
 	}
 	public void displayDailyOvertime()
 	{
+		System.out.println("Overtime based on daily calculation");
+		System.out.println("ID\tName\tSalary\tOver Time\tOver time payment");
 		for(int i = 0; i < emp.length; i++)
 		{
-			System.out.println(emp[i].getId()+"\t"+emp[i].getName()+"\t"+emp[i].getDailyOT()+"\t"+(emp[i].getDailyOT()*40));
+			System.out.println(emp[i].getId()+"\t"+emp[i].getName()+"\t"+emp[i].getBasicSalary()+"\t"+emp[i].getDailyOT()+"\t\t"+(emp[i].getDailyOT()*40));
 		}
 	}
 	public void calculateWeeklyOvertime()
@@ -134,17 +136,19 @@ class OverTime
 			int sum = 0;
 			for(int j = 0; j < arr.length; j++)
 			{
-				sum += arr[j];
+				sum = sum +arr[j];
 			}
-			sum = sum - 40;
+			sum = sum - (8*arr.length);
 			emp[i].setWeeklyOT(sum);
 		}
 	}
 	public void displayWeeklyOvertime()
 	{
+		System.out.println("Overtime based on weekly calculate");
+		System.out.println("ID\tName\tSalary\tOver Time\tOver time payment");
 		for(int i = 0; i < emp.length; i++)
 		{
-			System.out.println(emp[i].getId()+"\t"+emp[i].getName()+"\t"+emp[i].getWeeklyOT()+"\t"+(emp[i].getWeeklyOT()*60));
+			System.out.println(emp[i].getId()+"\t"+emp[i].getName()+"\t"+emp[i].getBasicSalary()+"\t"+emp[i].getWeeklyOT()+"\t\t"+(emp[i].getWeeklyOT()*60));
 		}
 	}
 }
@@ -152,12 +156,16 @@ public class OverTimeCalApplication
 {
 	public static void main(String x[])
 	{
-		Employee[] emp = new Employee[2];
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the total Employees: ");
+		int size = sc.nextInt();
+		Employee[] emp = new Employee[size];
 		OverTime ot = new OverTime();
 		ot.setEmployee(emp);
 		ot.calculateDailyOvertime();
 		ot.calculateWeeklyOvertime();
 		ot.displayDailyOvertime();
+		System.out.println();
 		ot.displayWeeklyOvertime();
 	}
 }
