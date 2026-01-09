@@ -10,8 +10,8 @@ public class VowelsInString
 	{
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the string input: ");
-		String in = sc.nextLine();
-		int count = 0;
+		String in = sc.nextLine(); // taking user input string
+		int count = 0; // this is count vowels in string
 		for(int i = 0; i < in.length(); i++)
 		{
 			if(in.charAt(i) == 'A' || in.charAt(i) == 'O' || in.charAt(i) == 'E'||in.charAt(i) == 'I' || in.charAt(i) == 'U')
@@ -19,6 +19,6 @@ public class VowelsInString
 			else if(in.charAt(i) == 'a' || in.charAt(i) == 'o' || in.charAt(i) == 'e'||in.charAt(i) == 'i' || in.charAt(i) == 'u')
 				count++;
 		}
-		System.out.println("The Total Vowels in String is: "+count);
+		System.out.println("The Total Vowels in String is: "+count); // show result
 	}
 }
