@@ -15,9 +15,10 @@ public class LengthOfString
 		int i = 0;
 		while(i < len.length())
 		{
-			if((len.charAt(i)>= "A" && len.charAt(i) <= "Z" 
-			) || (len.charAt(i) >= "a" && len.charAt(i) <= "z"))
+			if((len.charAt(i)>= 'A' && len.charAt(i) <= 'Z' 
+			) || (len.charAt(i) >= 'a' && len.charAt(i) <= 'z'))
 				count++;
+			i++;
 		}
 		System.out.println("The Length of String is: "+count);
 	}
