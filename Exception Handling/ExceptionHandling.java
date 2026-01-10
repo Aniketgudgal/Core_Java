@@ -28,7 +28,7 @@ public class ExceptionHandling
 			size =sc.nextInt();
 			arr = new int[size];
 			System.out.print("Enter the values in array: ");
-			for(int i = 0; i < arr.length; i++)
+			for(int i = 0; i <= arr.length; i++)
 			{
 				arr[i] = sc.nextInt();
 			}
@@ -37,8 +37,11 @@ public class ExceptionHandling
 				sum+= arr[i];
 			}
 		}
-		finally
+		catch(ArrayIndexOutOfBoundsException e)
 		{
+			System.out.println("You can not access index out of bound");
+		}
+		finally
 		{
 			System.out.println("The Sum is: "+sum);
 		}
