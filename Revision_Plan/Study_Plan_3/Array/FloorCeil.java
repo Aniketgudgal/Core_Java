@@ -1,5 +1,5 @@
 /*
- Write a program in java to find the Floor and Ceil of the number 0 to 10 from a sroted array.
+ Write a program in java to find the Floor and Ceil of the number 0 to 10 from a sorted array.
 Expected Output :
  The given array is : 1 3 5 7 8 9
  Number: 0 ceiling is: 1 floor is: -1
