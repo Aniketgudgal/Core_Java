@@ -26,7 +26,7 @@ class Thread2 extends Thread
 			for(int i = 1; i <= 10; i++)
 			{
 				System.out.println("Thread 2: "+i);
-				Thread.sleep(1000);
+				Thread.sleep(10000);
 			}
 		}
 		catch(InterruptedException e)
@@ -39,9 +39,20 @@ public class MainApplication
 {
 	public static void main(String x[])
 	{
-		Thread1 t1 = new Thread1();
-		Thread2 t2 = new Thread2();
-		t1.start();
-		t2.start();
+		try
+		{
+			Thread1 t1 = new Thread1();
+			Thread2 t2 = new Thread2();
+			t1.start();
+			t2.start();
+			t1.join();
+			t2.join();
+			System.out.println("All thread execution done");
+			Thread.sleep(3000);
+		}
+		catch(InterruptedException ex)
+		{
+			System.out.println("execption in main class");
+		}
 	}
 }
