@@ -1,7 +1,8 @@
 //import java.util.InterruptedExceptio;
+import java.util.*;
 class Thread1 extends Thread
 {
-	public void run()
+	public synchronized void run()
 	{
 		try{
 			
@@ -9,6 +10,7 @@ class Thread1 extends Thread
 			{
 				System.out.println("Thread 1: "+i);
 				Thread.sleep(1000);
+				wait(1000);
 			}
 		}
 		catch(InterruptedException e)
@@ -26,7 +28,7 @@ class Thread2 extends Thread
 			for(int i = 1; i <= 10; i++)
 			{
 				System.out.println("Thread 2: "+i);
-				Thread.sleep(10000);
+				Thread.sleep(1000);
 			}
 		}
 		catch(InterruptedException e)
@@ -37,15 +39,15 @@ class Thread2 extends Thread
 }
 public class MainApplication
 {
-	public static void main(String x[])
+	public synchronized static void main(String x[])
 	{
 		try
 		{
 			Thread1 t1 = new Thread1();
 			Thread2 t2 = new Thread2();
 			t1.start();
-			t2.start();
 			t1.join();
+			t2.start();
 			t2.join();
 			System.out.println("All thread execution done");
 			Thread.sleep(3000);
