@@ -50,6 +50,7 @@ public class ThreadApplication
 	{
 		try
 		{	
+			// created the two thread and runting the task
 			Work1 t1 = new Work1(1);
 			Work1 t2 = new Work1(2);
 			Work1 t3 = new Work1(3);
