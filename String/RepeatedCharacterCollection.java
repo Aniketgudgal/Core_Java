@@ -15,7 +15,10 @@ public class RepeatedCharacterCollection
 				System.out.println("First character is: "+in.charAt(i));
 				break;
 			}
-			al.add(in.charAt(i));
+			else
+			{
+				al.add(in.charAt(i));
+			}
 		}
 	}
 }
