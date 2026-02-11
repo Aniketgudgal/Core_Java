@@ -20,13 +20,22 @@ public class IsSorted
 		{
 			arr[i] = sc.nextInt();
 		}
+		boolean flag = true;
 		for(int i = 1; i < arr.length; i++)
 		{
 			if(arr[i-1] > arr[i])
 			{
-				System.out.println("Array is not sorted");
+				flag = false;
 				break;
 			}
+		}
+		if(flag)
+		{
+			System.out.println("Array is sorted");
+		}
+		else
+		{
+			System.out.println("not a sorted array");
 		}
 	}
 }
