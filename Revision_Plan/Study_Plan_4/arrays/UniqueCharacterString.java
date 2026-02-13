@@ -14,7 +14,14 @@ public class UniqueCharacterString
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the string input: ");
 		String str = sc.next();
+		String result = uniqueCharacter(str);
+		System.out.println("The result is: "+result);
+	}
+	public static String uniqueCharacter(String str)
+	{
 		String result = "_";
+		/*
+		// first approach
 		for(int i = 0; i < str.length() - 1; i++)
 		{
 			int count = 0;
@@ -39,6 +46,21 @@ public class UniqueCharacterString
 				break;
 			}
 		}
-		System.out.println("The result is: "+result);
+		*/
+		int[] ch = new int[26];
+		for(int i = 0; i < str.length(); i++)
+		{
+			ch[str.charAt(i) - 'a']++;
+		}
+		for(int i = 0; i < str.length(); i++)
+		{
+			int count = ch[str.charAt(i) - 'a'];
+			if(count < 2)
+			{
+				result = str.charAt(i)+"";
+				break;
+			}
+		}
+		return result;
 	}
 }
