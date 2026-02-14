@@ -47,6 +47,7 @@ public class UniqueCharacterString
 			}
 		}
 		*/
+		// second approach
 		int[] ch = new int[26];
 		for(int i = 0; i < str.length(); i++)
 		{
