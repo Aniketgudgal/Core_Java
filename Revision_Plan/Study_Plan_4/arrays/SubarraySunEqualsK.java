@@ -5,6 +5,7 @@ Example
 Input: nums=[1,1,1], k=2 → 2
 */
 import java.util.Scanner;
+import java.util.Arrays;
 public class SubarraySunEqualsK
 {
 	public static void main(String x[])
@@ -20,19 +21,58 @@ public class SubarraySunEqualsK
 		}
 		System.out.print("Enter the value of K: ");
 		int k = sc.nextInt();
-		int count = 0;
-		for(int i = 0; i < arr.length; i++)
+		Arrays.sort(arr);
+
+        int[] values = new int[size];
+        int[] freq = new int[size];
+
+        int index = 0;
+        int count = 1;
+
+        for (int i = 1; i < size; i++) 
 		{
-			int sum = 0;
-			for(int j = i; j < arr.length; j++)
+
+            if (arr[i] == arr[i - 1]) 
 			{
-				sum += arr[j];
-				if(sum == k)
+                count++;
+            } 
+            else 
+			{
+                values[index] = arr[i - 1];
+                freq[index] = count;
+                index++;
+                count = 1;
+            }
+        }
+
+        values[index] = arr[size - 1];
+        freq[index] = count;
+        index++;
+
+        // sort by frequency descending
+        for (int i = 0; i < index - 1; i++) 
+		{
+            for (int j = i + 1; j < index; j++) 
+			{
+
+                if (freq[i] < freq[j]) 
 				{
-					count++;
-				}
-			}
-		}
-		System.out.println("The total subarrays with sum equals to k is: "+count);
+
+                    int temp = freq[i];
+                    freq[i] = freq[j];
+                    freq[j] = temp;
+
+                    int temp2 = values[i];
+                    values[i] = values[j];
+                    values[j] = temp2;
+                }
+            }
+        }
+
+        System.out.print("Top K frequent elements: ");
+        for (int i = 0; i < k && i < index; i++) 
+		{
+            System.out.print(values[i] + " ");
+        }
 	}
 }
