@@ -22,7 +22,6 @@ public class ClockAngle
 		}
 		double hAngle = 30* hour + 0.5*minute;
 		double mAngle = 6*minute;
-		
 		double angle = Math.abs(hAngle - mAngle);
 		double resultAngle = Math.min(angle, 360- angle);
 		System.out.println("The Angle is: "+resultAngle+" degree");
