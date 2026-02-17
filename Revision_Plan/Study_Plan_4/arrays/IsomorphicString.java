@@ -36,7 +36,7 @@ public class IsomorphicString
 	}
 	public static String encodingString(String s)
 	{
-		 int[] map = new int[256];
+		int[] map = new int[256];
         int next = 1;
 
         String result = "";

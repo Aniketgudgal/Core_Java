@@ -33,6 +33,7 @@ public class SortColors
 			}
 		}
 		*/
+		//Dutch National Flag Algorithm (three-pointer partitioning)
 		int low = 0;
 		int mid = 0;
 		int high = arr.length - 1;
