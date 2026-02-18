@@ -13,20 +13,20 @@ public class StringTimeConvert
 		int hour = 0;
 		int min = 0;
 		int sec = 0;
-		String duration = "";
+		StringBuffer duration = new StringBuffer();
 		int count = 0;
-		String rev = "";
+		StringBuffer rev = new StringBuffer();
 		for(int i = 0; i < s.length(); i++)
 		{
 			if(s.charAt(i) != ':')
 			{
 				if(s.charAt(i) >= '0' && s.charAt(i) <= '9')
 				{
-					rev += s.charAt(i);
+					rev.append(s.charAt(i));
 				}
 				else if(s.charAt(i) >= 'A' && s.charAt(i) <= 'Z')
 				{
-					duration += s.charAt(i);
+					duration.append(s.charAt(i));
 				}
 			}
 			else
@@ -34,17 +34,17 @@ public class StringTimeConvert
 				count++;
 				if(count == 1)
 				{
-					hour = Integer.parseInt(rev);
-					rev = "";
+					hour = Integer.parseInt(rev.toString());
+					rev.setLength(0);
 				}
 				else if(count == 2)
 				{
-					min = Integer.parseInt(rev);
-					rev = "";
+					min = Integer.parseInt(rev.toString());
+					rev.setLength(0);
 				}
 				else
 				{
-					sec = Integer.parseInt(rev);
+					sec = Integer.parseInt(rev.toString());
 				}
 			}
 		}
@@ -53,7 +53,7 @@ public class StringTimeConvert
 		"11:30:00AM" -> "11:30:00"
 		"11:30:00PM" -> "23:30:00"
 		*/
-		if(duration.equals("AM"))
+		if(duration.toString().equals("AM"))
 		{
 			if(hour == 12)
 				hour = 0;
