@@ -2,7 +2,7 @@
 Write a java program to merge two arrays.
 
 	Input - First Array :- 1 2 3 4 5
-             	  Second Array :-  6 7 8 9 10 
+            Second Array :-  6 7 8 9 10 
 	Output - 1 10 2 9 3 8 4 7 5 6
 */
 import java.util.Scanner;
