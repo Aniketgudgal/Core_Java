@@ -6,6 +6,7 @@ There are 3 formulas to sovle this problem
 2. when you know the Diameter:      A = (π/4) × D^2
 3. when you know the Circumference:  A = C^2 / 4π
 */
+
 import java.util.Scanner;
 public class AreaApp
 {
