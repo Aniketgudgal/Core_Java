@@ -3,6 +3,7 @@
 Create a class Calculator with methods add, subtract, multiply, and divide for two numbers. Call them from the main method and print results.
 Explanation: Teaches basic arithmetic operations using methods.
 */
+
 import java.util.Scanner;
 public class CalApp
 {
