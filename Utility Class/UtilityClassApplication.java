@@ -14,6 +14,7 @@ class UtilityClass
 		System.out.println("This method show the utility class example");
 	}
 }
+
 public class UtilityClassApplication
 {
 	public static void main(String x[])
