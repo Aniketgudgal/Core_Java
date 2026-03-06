@@ -1,0 +1,29 @@
+/*
+Q2. Write a java program to print this pattern.
+*/
+public class PatternApp
+{
+	public static void main(String x[])
+	{
+		for(int i= 1; i <=7; i++)
+		{
+			char ch = 64;
+			for(int j = 1; j <= 8; j++)
+			{
+				if((i >= j && i <= 4) || (j <= 8 - i && i >= 4))
+				{
+					System.out.print((++ch)+" ");
+				} 
+				else if ((j >= 9 - i && i <= 4) || (j >= i+1 && i >= 4))
+				{
+					System.out.print((ch--)+" ");
+				}
+				else
+				{
+					System.out.print("  ");
+				}
+			}
+			System.out.println();
+		}
+	}
+}

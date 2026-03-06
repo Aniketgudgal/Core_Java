@@ -1,0 +1,50 @@
+/*Q1. Write a java program to check Number Is Armstrong Number or Not Armstrong using
+function recursion.
+*/
+import java.util.Scanner;
+public class ArmstrongNumberCheck
+{
+	public static void main(String x[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the number: ");
+		int n = sc.nextInt();
+		int pw = digitCount(n,0);
+		int result = armstrong(n, 0,pw);
+		if(result == n)
+		{
+			System.out.println("The given number is Armstrong");
+		}
+		else
+		{
+			System.out.println("Not a Armstrong Number");
+		}
+	}
+	public static int armstrong(int n, int sum, int pw)
+	{
+		if(n == 0)
+		{
+			return sum;
+		}
+		else
+		{
+			int rem = n % 10;
+			int result = (int)Math.pow(rem,pw);
+			sum += result;
+			n = n /10;
+			return armstrong(n,sum, pw);
+		}
+	}
+	public static int digitCount(int n, int i)
+	{
+		if(n == 0)
+		{
+			return i;
+		}
+		else 
+		{
+			n = n /10;
+			return digitCount(n, i+1);
+		}
+	}
+}

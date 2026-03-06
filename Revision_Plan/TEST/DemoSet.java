@@ -1,0 +1,23 @@
+import java.util.Scanner;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Iterator;
+public class DemoSet
+{
+	public static void main(String x[])
+	{
+		Scanner sc = new Scanner(System.in);
+		Set<Integer> al = new HashSet<>();
+		System.out.print("Enter the size of set: ");
+		int size = sc.nextInt();
+		for(int i = 0; i < size; i++)
+		{
+			al.add(sc.nextInt());
+		}
+		Iterator<Integer> sb = al.iterator();
+		while(sb.hasNext())
+		{
+			System.out.println(sb.next());
+		}
+	}
+}

@@ -1,0 +1,57 @@
+/*
+Q5. Write a java program to store words in an ArrayList. Print words that start and end with the
+same character.
+Input: [level, cat, radar, java, madam]
+Output : level , radar , madam
+Description:
+Traverse each word and compare first and last character manually using charAt().
+*/
+import java.util.Scanner;
+import java.util.ArrayList;
+public class SameCharacter
+{
+	public static void main(String x[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the size of Array List: ");
+		int size = sc.nextInt();
+		ArrayList<String> al = new ArrayList<>();
+		System.out.print("Enter the values in array list: ");
+		for(int i = 1; i <= size; i++)
+		{
+			al.add(sc.next());
+		}
+		System.out.print("Result is: ");
+		for(int i = 0; i < al.size(); i++)
+		{
+			if(isSame(al.get(i)))
+			{
+				System.out.print(al.get(i)+" ");
+			}
+			
+		}
+		
+	}
+	public static boolean isSame(String s)
+	{
+		if(s.length() == 0)
+		{
+			return false;
+		}
+		if(s.length() == 1)
+		{
+			return true;
+		}
+		char firstChar = s.charAt(0);
+		char lastChar = ' ';
+		for(int i = 0; i < s.length(); i++)
+		{
+			if(i == (s.length() - 1))
+			{
+				lastChar = s.charAt(i);
+			}
+		}
+		
+		return firstChar == lastChar ? true: false;
+	}
+}
