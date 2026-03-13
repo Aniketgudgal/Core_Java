@@ -3,7 +3,8 @@ public class ExceptionHandling
 {
 	public static void main(String x[])
 	{
-		Scanner sc = new Scanner(System.in);
+	
+	Scanner sc = new Scanner(System.in);
 		int sum = 0;
 		System.out.print("Enter the size of array: ");
 		int size = sc.nextInt();
