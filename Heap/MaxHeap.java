@@ -19,14 +19,29 @@ public class MaxHeap
 		{
 			System.out.print(num[i] + " ");
 		}
+		
+		//heap sorting with max heap concept
+		for(int i = num.length - 1; i > 0; i--)
+		{
+			swap(num,0,i);
+			heapify(num,0,i);
+		}
+		// print heap sort array
+		System.out.println("\nHeap Sorted array");
+		for(int i = 0; i < num.length; i++)
+		{
+			System.out.print(num[i] + " ");
+		}
 	}
 	public static void maxHeapTravel(int[] arr, int size)
 	{
+		// calculate last root node of tree
 		for(int i = size/2 - 1; i>= 0; i--)
 		{
 			heapify(arr,i,size);
 		}
 	}
+	// first parameter take array, second parameter take the index, last parameter is the size of tree or size of array
 	public static void heapify(int[] arr, int index, int size)
 	{
 		int curr = index;
