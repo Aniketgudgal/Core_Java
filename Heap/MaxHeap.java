@@ -19,7 +19,7 @@ public class MaxHeap
 			System.out.print(num[i] + " ");
 		}
 	}
-	public static void maxHeadTravel(int[] arr, int size)
+	public static void maxHeapTravel(int[] arr, int size)
 	{
 		for(int i = size/2 - 1; i>= 0; i--)
 		{
