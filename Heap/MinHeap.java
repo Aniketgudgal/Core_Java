@@ -13,7 +13,7 @@ public class MinHeap
 		{
 			num[i] = sc.nextInt();
 		}
-		minHeadTravel(num,num.length);
+		minHeapTravel(num,num.length);
 		System.out.println("The Min Heap Array is");
 		for(int i = 0; i < num.length; i++)
 		{
