@@ -1,6 +1,6 @@
 import java.util.Scanner;
-// this algorithm work with the binary tree and produce the max number to starting of array
-public class MaxHeap
+// this algorithm work with the binary tree and produce the min number to starting of array
+public class MinHeap
 {
 	public static void main(String x[])
 	{
@@ -13,14 +13,14 @@ public class MaxHeap
 		{
 			num[i] = sc.nextInt();
 		}
-		maxHeapTravel(num,num.length);
-		System.out.println("The Max Heap Array is");
+		minHeadTravel(num,num.length);
+		System.out.println("The Min Heap Array is");
 		for(int i = 0; i < num.length; i++)
 		{
 			System.out.print(num[i] + " ");
 		}
 	}
-	public static void maxHeapTravel(int[] arr, int size)
+	public static void minHeapTravel(int[] arr, int size)
 	{
 		for(int i = size/2 - 1; i>= 0; i--)
 		{
@@ -32,11 +32,11 @@ public class MaxHeap
 		int curr = index;
 		int left = 2*index+1;
 		int right = 2*index+2;
-		if(left < size && arr[left] > arr[curr])
+		if(left < size && arr[left] < arr[curr])
 		{
 			curr = left;
 		}
-		if(right < size && arr[right] > arr[curr])
+		if(right < size && arr[right] < arr[curr])
 		{
 			curr = right;
 		}
