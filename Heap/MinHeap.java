@@ -19,6 +19,24 @@ public class MinHeap
 		{
 			System.out.print(num[i] + " ");
 		}
+		// sort array using heap technique
+		sortArray(num);
+		System.out.println("\nSorted array");
+		for(int i = 0; i < num.length; i++)
+		{
+			System.out.print(num[i]+" ");
+		}
+	}
+	public static void sortArray(int[] num)
+	{
+		for(int i = num.length -1; i> 0; i--)
+		{
+			// swap first min element to last index
+			// decrement size from last index
+			// apply heapify to the remaining element and take min value to first index i.e 0th index
+			swap(num,0,i);
+			heapify(num,0,i);
+		}
 	}
 	public static void minHeapTravel(int[] arr, int size)
 	{
