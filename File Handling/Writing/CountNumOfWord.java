@@ -18,5 +18,6 @@ public class CountNumOfWord
 			line = bf.readLine();
 		}
 		System.out.println("Word Count is: "+count);
+		bf.close();
 	}
 }
