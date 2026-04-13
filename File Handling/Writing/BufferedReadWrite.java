@@ -11,23 +11,28 @@ public class BufferedReadWrite
 		
 		String path = "D://Tech Hub//github core java//File Handling//Writing//abc123.txt";
 		File f = new File(path);
-		boolean created = f.createNewFile();
-		if(created)
+		if(!f.exists())
 		{
-			FileWriter fw = new FileWriter(path);
-			BufferedWriter bf = new BufferedWriter(fw);
-			Scanner sc = new Scanner(System.in);
-			System.out.print("Enter Write data: ");
-			String input = sc.nextLine();
-			bf.write(input);
-			bf.newLine();
-			bf.close();
-			fw.close();
+			boolean created = f.createNewFile();
+			if(created)
+			{
+				System.out.println("File Created");
+			}
+			else
+			{
+				System.out.println("Error to create file");
+			}
 		}
-		else
-		{
-			System.out.println("Error to create file");
-		}
+		FileWriter fw = new FileWriter(path, true);
+		BufferedWriter bf = new BufferedWriter(fw);
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the Data: ");
+		String input = sc.nextLine();
+		bf.write(input);
+		bf.newLine();
+		bf.close();
+		fw.close();
+		System.out.println("Data write");
 		}
 		catch(IOException e)
 		{
