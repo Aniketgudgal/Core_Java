@@ -80,7 +80,9 @@ public class StreamAPIExample
 		emp.add(e5);
 		System.out.println("Employee whose salary > 50,000");
 		Stream<Employee> st = emp.stream().filter((e) -> e.getSalary() > 50000);
+		// used inbuild function for the filtering data
 		st.forEach((v) -> System.out.println(v));
+		// count method returns the long value of counts
 		long total = emp.stream().filter((e) -> e.getDept() == "IT").count();
 		System.out.println("Total employee is IT department: "+total);
 	}
