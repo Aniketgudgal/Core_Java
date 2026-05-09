@@ -15,7 +15,7 @@ public class ReverseEachWordInString
 		StringBuffer result = new StringBuffer();
 		for(int i = 0; i < val.length(); i++)
 		{
-			if(val.charAt(i) == ' ' || i == val.length() -1)
+			if(val.charAt(i) == ' ' || i == val.length() -1) // check space and last character in string
 			{
 				if(i == val.length() -1)
 				{
@@ -31,6 +31,7 @@ public class ReverseEachWordInString
 		}
 		System.out.println(result);
 	}
+	// reverse the string 
 	public static String reverseWord(StringBuffer sb)
 	{
 		int i = 0;
