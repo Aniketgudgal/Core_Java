@@ -11,11 +11,13 @@ public class IncryptString
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the string value: ");
 		String val = sc.next();
+		// freq. Array for each character
 		int[] arr = new int[26];
 		for(int i = 0; i < val.length(); i++)
 		{
 			arr[val.charAt(i) - 'a']++;
 		}
+		// Incrypte String by character by character
 		StringBuffer result = new StringBuffer();
 		for(int i = 0; i < val.length(); i++)
 		{
