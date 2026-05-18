@@ -14,6 +14,7 @@ public class RemoveWhiteSpace
 	}
 	public static String removeSpace(String s)
 	{
+		// string buffer to perfomace improvement
 		StringBuffer sb = new StringBuffer();
 		for(int i = 0; i < s.length(); i++)
 		{
