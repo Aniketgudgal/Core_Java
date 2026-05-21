@@ -25,47 +25,35 @@ public class RearrangePositiveNegative
 		}
 		ArrayList<Integer> pos = new ArrayList<>();
 		ArrayList<Integer> neg = new ArrayList<>();
-		for(int i = 0; i < nums.length; i++)
-		{
-			if(nums[i] > 0)
-			{
-				pos.add(nums[i]);
-			}
-			else
-			{
-				neg.add(nums[i]);
-			}
-		}
-		boolean flag = false;
-		int j = 0;
-		int k = 0;
-		for(int i = 0; i < nums.length; i++)
-		{
-			if(flag && nums[i] > 0)
-			{
-				j++;
-				flag = false;
-			}
-			else if(!flag && nums[i] < 0)
-			{
-				k++;
-				flag = true;
-			}
-			else if(flag & nums[i] < 0)
-			{
-				nums[i] = pos.get(j);
-				j++;
-				flag = false;
-			}
-			else
-			{
-				nums[i] = neg.get(k);
-				k++;
-				flag = true;
-			}
-		}
+		for(int n : nums)
+        {
+            if(n >= 0)
+            {
+                pos.add(n);
+            }
+            else
+            {
+                neg.add(n);
+            }
+        }
+		int i = 0;
+        int p = 0;
+        int n = 0;
+        while(p < pos.size() && n < neg.size())
+        {
+            nums[i++] = neg.get(n++);
+            nums[i++] = pos.get(p++);
+        }
+        while(n < neg.size())
+        {
+            nums[i++] = neg.get(n++);
+        }
+        while(p < pos.size())
+        {
+            nums[i++] = pos.get(p++);
+        }
 		System.out.println("Result array is: ");
-		for(int i = 0; i < nums.length; i++)
+		for(i = 0; i < nums.length; i++)
 		{
 			System.out.print(nums[i]+" ");
 		}
