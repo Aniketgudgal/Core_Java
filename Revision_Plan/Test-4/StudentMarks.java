@@ -26,6 +26,7 @@ public class StudentMarks
 	public static void main(String x[])
 	{
 		Scanner sc = new Scanner(System.in);
+		// take user input 
 		System.out.print("Enter the number of student: ");
 		int size = sc.nextInt();
 		String[] names = new String[size];
@@ -46,9 +47,11 @@ public class StudentMarks
 		LinkedHashMap<String,Integer> hm = new LinkedHashMap<>();
 		for(int i = 0; i < names.length; i++)
 		{
+			// calculate total marks
 			int totalMarks = java[i]+SQL[i]+python[i];
 			hm.put(names[i],totalMarks);
 		}
+		// calculate percentage
 		percentage(hm,3);
 	}
 	public static void percentage(LinkedHashMap<String, Integer> hm, int totalSubject)
