@@ -1,31 +1,23 @@
 // second max duplicate Element from array
+import java.util.Scanner;
 public class TestApplication
 {
 	public static void main(String x[])
 	{
 		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the size of Array: ");
 		int size = sc.nextInt();
 		int[] arr = new int[size];
-		// sort the array
-		for(int i = 0; i < arr.length - 1; i++)
-		{	
-			for(int j = i+1; j < arr.length; j++)
-			{
-				if(arr[i] > arr[j])
-				{
-					int temp = arr[i];
-					arr[i] = arr[j];
-					arr[j] = temp;
-				}
-			}
+		System.out.print("Enter the values in Array: ");
+		for(int i = 0; i < arr.length; i++)
+		{
+			arr[i] = sc.nextInt();
 		}
-		System.out.print("Enter the target Max: ");
-		int target = sc.nextInt();
-		int count = 0;
+		boolean flag = false;
+		int max = Integer.MIN_VALUE;
 		for(int i = 0; i < arr.length; i++)
 		{
 			
-			int max = Integer.MIN_VALUE;
 			for(int j = 0; j < arr.length; j++)
 			{
 				if(arr[j] > max)
@@ -37,6 +29,10 @@ public class TestApplication
 			if(isDuplicate(arr, sMax))
 			{
 				System.out.println("Result is: "+sMax);
+				flag = true;
+			}
+			if(flag)
+			{
 				break;
 			}
 		}
