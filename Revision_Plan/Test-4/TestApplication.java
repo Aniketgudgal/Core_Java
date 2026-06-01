@@ -5,9 +5,11 @@ public class TestApplication
 	public static void main(String x[])
 	{
 		Scanner sc = new Scanner(System.in);
+		// take the array size from user
 		System.out.print("Enter the size of Array: ");
 		int size = sc.nextInt();
 		int[] arr = new int[size];
+		//insert data into array
 		System.out.print("Enter the values in Array: ");
 		for(int i = 0; i < arr.length; i++)
 		{
