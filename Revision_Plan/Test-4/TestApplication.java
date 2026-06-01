@@ -39,6 +39,7 @@ public class TestApplication
 			}
 		}
 	}
+	// get second max
 	public static int secondMax(int arr[], int max)
 	{
 		int secondMax = Integer.MIN_VALUE;
