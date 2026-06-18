@@ -49,6 +49,7 @@ public class ParallelThreadExecution
 			arr[i] = sc.nextInt();
 		}
 		// parallel thread execution
+		// divide the work in 2 parts and take sum of two thread result and show the output
 		ExecutorService ex = Executors.newFixedThreadPool(2);
 		Future<Integer> t1 = ex.submit(new SumOfTotal(arr,1,arr.length/2));
 		Future<Integer> t2 = ex.submit(new SumOfTotal(arr,(arr.length/2)+1,arr.length));
