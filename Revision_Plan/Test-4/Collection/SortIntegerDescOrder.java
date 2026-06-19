@@ -62,6 +62,7 @@ public class SortIntegerDescOrder
 		{
 			System.out.println(s);
 		}
+		// sort user define object
 		Collections.sort(al,(s1,s2) -> s1.getId()< s2.getId() ? 1: s1.getId() > s2.getId() ? -1 : 0);
 		System.out.println("After sorting");
 		for(Student s: al)
