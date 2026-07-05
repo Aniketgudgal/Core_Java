@@ -58,6 +58,7 @@ public class SortIntegerDescOrder
 		al.add(new Student("Gokul",4,6000));
 		al.add(new Student("Omkar",2,7000));
 		System.out.println("Before Sorting");
+		//print output
 		for(Student s: al)
 		{
 			System.out.println(s);
