@@ -18,6 +18,7 @@ class SumOfTotal implements Callable<Integer>
 	private int s;
 	private int e;
 	private int[] arr;
+	//function to take sum
 	public SumOfTotal(int[] arr, int s, int e)
 	{
 		this.arr = arr;
