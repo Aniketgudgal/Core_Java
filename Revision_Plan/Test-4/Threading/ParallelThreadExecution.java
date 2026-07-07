@@ -13,6 +13,7 @@ Shared results
 */
 import java.util.concurrent.*;
 import java.util.Scanner;
+//implement callable interface
 class SumOfTotal implements Callable<Integer>
 {
 	private int s;
