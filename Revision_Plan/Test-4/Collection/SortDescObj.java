@@ -4,6 +4,7 @@ Description: Sort names from Z to A.
 */
 import java.util.ArrayList;
 import java.util.Collections;
+//pojo  class
 class Student implements Comparable<Student>
 {
 	private String name;
