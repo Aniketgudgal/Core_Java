@@ -12,6 +12,7 @@ public class FrequentHighestNumber
 		//take user input
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the size of Array: ");
+		//take array size
 		int size = sc.nextInt();
 		int[] arr = new int[size];
 		System.out.print("Enter the values in array: ");
