@@ -14,6 +14,7 @@ public class FrequentHighestNumber
 		System.out.print("Enter the size of Array: ");
 		//take array size
 		int size = sc.nextInt();
+		//initialize array
 		int[] arr = new int[size];
 		System.out.print("Enter the values in array: ");
 		for(int i = 0; i < arr.length; i++)
