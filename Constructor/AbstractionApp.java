@@ -7,6 +7,7 @@ abstract class Circle
 		PI = 3.14f;
 	}
 	abstract float getCircle();
+
 }
 class Area extends Circle
 {
