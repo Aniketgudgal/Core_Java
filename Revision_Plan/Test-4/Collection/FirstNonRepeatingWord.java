@@ -10,6 +10,7 @@ public class FirstNonRepeatingWord
 	public static void main(String x[])
 	{
 		Scanner sc = new Scanner(System.in);
+		//take input from user
 		System.out.print("Enter the String input: ");
 		String input = sc.nextLine();
 		String[] word = input.split(" ");
