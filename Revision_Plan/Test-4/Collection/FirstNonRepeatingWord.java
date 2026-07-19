@@ -13,6 +13,7 @@ public class FirstNonRepeatingWord
 		//take input from user
 		System.out.print("Enter the String input: ");
 		String input = sc.nextLine();
+		// split given string
 		String[] word = input.split(" ");
 		LinkedHashMap<String, Integer> hm = new LinkedHashMap<>();
 		for(int i = 0; i < word.length; i++)
