@@ -5,6 +5,7 @@ Description: Arrange integers from smallest to largest.
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+// POJO class
 class Employee
 {
 	private String name;
