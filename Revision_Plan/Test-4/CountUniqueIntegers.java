@@ -12,6 +12,7 @@ public class CountUniqueIntegers
 	{
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the size of list: ");
+		//take user input
 		int size = sc.nextInt();
 		ArrayList<Integer> al = new ArrayList<>();
 		System.out.print("Enter the values in list: ");
