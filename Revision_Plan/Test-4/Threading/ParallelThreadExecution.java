@@ -16,6 +16,7 @@ import java.util.Scanner;
 //implement callable interface
 class SumOfTotal implements Callable<Integer>
 {
+	// declare instance variables
 	private int s;
 	private int e;
 	private int[] arr;
