@@ -18,6 +18,7 @@ public class GroupStringByLength
 	{
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the size: ");
+		//take user input
 		int size = sc.nextInt();
 		String[] input = new String[size];
 		System.out.print("Enter the values: ");
