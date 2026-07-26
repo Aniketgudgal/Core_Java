@@ -20,6 +20,7 @@ public class GroupStringByLength
 		System.out.print("Enter the size: ");
 		//take user input
 		int size = sc.nextInt();
+		// create string array
 		String[] input = new String[size];
 		System.out.print("Enter the values: ");
 		for(int i = 0; i < size; i++)
