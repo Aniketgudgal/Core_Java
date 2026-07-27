@@ -23,6 +23,7 @@ public class GroupStringByLength
 		// create string array
 		String[] input = new String[size];
 		System.out.print("Enter the values: ");
+		// insert values in array
 		for(int i = 0; i < size; i++)
 		{
 			input[i] = sc.next();
