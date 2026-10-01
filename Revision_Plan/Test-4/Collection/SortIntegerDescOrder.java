@@ -54,6 +54,7 @@ public class SortIntegerDescOrder
 	public static void main(String x[])
 	{
 		ArrayList<Student> al = new ArrayList<>();
+		//store values in ArrayList
 		al.add(new Student("Tahir",3,1400));
 		al.add(new Student("Aniket",1,400));
 		al.add(new Student("Gokul",4,6000));

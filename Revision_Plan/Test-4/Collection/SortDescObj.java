@@ -58,6 +58,7 @@ public class SortDescObj
 	public static void main(String x[])
 	{
 		ArrayList<Student> al = new ArrayList<>();
+		//Store the values in Arraylist
 		al.add(new Student("Shivam",1,10));
 		al.add(new Student("Gokul",2,20));
 		al.add(new Student("Aniket",3,14));
